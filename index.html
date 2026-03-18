@@ -96,6 +96,28 @@
         .center {
             text-align: center;
         }
+        <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyAdiqmNAyJOqsigX8_1_D8dDFQhfhcKADY",
+        authDomain: "bater-ponto-cc39c.firebaseapp.com",
+        projectId: "bater-ponto-cc39c",
+        storageBucket: "bater-ponto-cc39c.appspot.com",
+        messagingSenderId: "304888003378",
+        appId: "1:304888003378:web:2a0295fa03429fd13bb52b",
+        measurementId: "G-Z0FB4JYVTM"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    window.auth = auth;
+    window.db = db;
+</script>
 
         .actions {
             display: flex;
